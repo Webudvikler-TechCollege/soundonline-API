@@ -1,3 +1,24 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border: solid 1px #000; }
+
+.item1 {
+  border: solid 1px #000; }
+
+.item2 {
+  display: grid;
+  border: solid 1px #000;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2/3; }
+
+.item2 > * {
+  border: solid 1px #000;
+  text-align: center; }
+  .item2 > * img {
+    width: 100%; }
+
 ul li {
   cursor: pointer; }
   ul lihover {

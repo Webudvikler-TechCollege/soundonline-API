@@ -23,7 +23,6 @@ function fetchgroups(parent_id) {
                 let id = item.id;
                 let li = document.createElement('li');
                 li.setAttribute('id', 'list-' + id);
-                console.log(item.parent_id);
                 if(item.parent_id > 0) {
                     li.addEventListener('click', () => { getproducts(id)} );
                 } else {
@@ -63,7 +62,21 @@ function getproducts(group_id) {
             }
         })
         .then(data => {
-            console.log(data);
+            let products = document.getElementById('products');
+            products.innerHTML = '';
+            for(let item of data) {
+                let article = document.createElement('article');
+                let figure = document.createElement('figure');
+                let img = document.createElement('img');
+                let h2 = document.createElement('h2');
+                img.setAttribute('src', '/images/products/' + item.image);
+                figure.appendChild(img);
+                article.appendChild(figure);
+                h2.innerText = item.title;
+                article.appendChild(h2);
+
+                products.appendChild(article);
+            }
         })
         .catch(err => {
             console.error(err);

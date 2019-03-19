@@ -7,10 +7,13 @@
 </head>
 <body>
 
-<div class="page-wrapper">
+<div id="pagewrapper">
     <header>
         <h1>SoundOnline</h1>
     </header>
 
-    <nav id="groups"></nav>
+    <div id="mainwrapper" class="grid-container">
+        <nav id="groups" class="item1"></nav>
+        <div id="products" class="item2"></div>
+    </div>
 </div>
