@@ -1,0 +1,18 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?api/brands/get/(.*?)/?$ /api/brands/get.php?id=$1 [L]
+RewriteRule ^/?api/brands/get/?$ /api/brands/ [L]
+RewriteRule ^/?api/products/get/(.*?)/?$ /api/products/get.php?id=$1 [L]
+RewriteRule ^/?api/products/getbygroup/(.*?)/?$ /api/products/getbygroup.php?id=$1 [L]
+RewriteRule ^/?api/products/getbybrand/(.*?)/?$ /api/products/getbybrand.php?id=$1 [L]
+RewriteRule ^/?api/products/get/?$ /api/products/ [L]
+RewriteRule ^/?api/productgroups/get/(.*?)/?$ /api/productgroups/get.php?id=$1 [L]
+RewriteRule ^/?api/productgroups/getbyparent/(.*?)/?$ /api/productgroups/getbyparent.php?id=$1 [L]
+RewriteRule ^/?api/productgroups/getbybrand/(.*?)/?$ /api/productgroups/getbybrand.php?id=$1 [L]
+RewriteRule ^/?api/productgroups/list/(.*?)/?$ /api/productgroups/index.php?id=$1 [L]
+
+
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /users\.php\?name=([^\&\ ]+)
+#RewriteRule ^/?users\.php$ /users/%1? [L,R=301]
