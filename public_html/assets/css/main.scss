@@ -1,5 +1,5 @@
-#pagewrapper {
-
+* {
+  font-family: 'Trebuchet MS';
 }
 
 .grid-container {
@@ -8,26 +8,36 @@
   border: solid 1px #000;
 }
 
-.item1 {
+.groups {
   border: solid 1px #000;
 }
 
-.item2 {
+.products {
   display: grid;
   border: solid 1px #000;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
   grid-column: 2/3;
 }
 
-.item2 > * {
+.productlist {
+  grid-template-columns: repeat(4, 1fr);
+}
+.productdetails {
+  grid-template-columns: 1fr;
+}
+
+.products > * {
   border: solid 1px #000;
-  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
   img {
     width: 100%;
   }
 }
 
+.price {
+  font-size: 1.3rem;
+}
 
 ul li {
   cursor: pointer;

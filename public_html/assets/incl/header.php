@@ -13,7 +13,7 @@
     </header>
 
     <div id="mainwrapper" class="grid-container">
-        <nav id="groups" class="item1"></nav>
-        <div id="products" class="item2"></div>
+        <nav id="groups" class="groups"></nav>
+        <div id="products" class="products productlist"></div>
     </div>
 </div>
