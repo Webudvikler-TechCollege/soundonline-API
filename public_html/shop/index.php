@@ -9,5 +9,4 @@
 require_once filter_input(INPUT_SERVER, "DOCUMENT_ROOT") . "/assets/incl/init.php";
 
 require_once filter_input(INPUT_SERVER, "DOCUMENT_ROOT") . "/assets/incl/header.php";
-
 require_once filter_input(INPUT_SERVER, "DOCUMENT_ROOT") . "/assets/incl/footer.php";
